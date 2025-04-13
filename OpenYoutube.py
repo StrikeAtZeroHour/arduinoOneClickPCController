@@ -3,7 +3,7 @@ import webbrowser
 import time
 
 try:
-    ser = serial.Serial('COM3', 9600)  # Replace COM3 with your Arduino's port
+    ser = serial.Serial('COM3', 9600, timeout=1)  # Replace COM3 with your Arduino's port
     print("Serial port opened successfully!")
 except serial.SerialException as e:
     print(f"Error opening serial port: {e}")
